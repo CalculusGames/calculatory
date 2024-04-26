@@ -20,4 +20,6 @@ interface Tile {
      */
     val value: Double
 
+    override fun equals(other: Any?): Boolean
+
 }
