@@ -1,3 +1,6 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+
 plugins {
     kotlin("multiplatform") version "1.9.23"
 
@@ -17,18 +20,26 @@ repositories {
 
 kotlin {
     jvm()
-
     js {
-        browser()
+        browser {
+            testTask {
+                useKarma {
+                    useFirefoxHeadless()
+                }
+            }
+        }
     }
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
-    testImplementation(kotlin("test"))
+    commonTestImplementation(kotlin("test"))
 }
 
 tasks {
+    clean {
+        delete("kotlin-js-store")
+    }
+
     test {
         useJUnitPlatform()
         testLogging {
@@ -42,7 +53,9 @@ tasks {
 
         reports {
             csv.required.set(false)
-            xml.required.set(false)
+
+            xml.required.set(true)
+            xml.outputLocation.set(layout.buildDirectory.file("jacoco.xml"))
 
             html.required.set(true)
             html.outputLocation.set(layout.buildDirectory.dir("jacocoHtml"))
