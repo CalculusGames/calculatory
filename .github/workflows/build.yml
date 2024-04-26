@@ -1,0 +1,38 @@
+name: Build Project
+
+on:
+  push:
+    branches: [ master, ver/* ]
+  pull_request:
+    branches: [ master, ver/* ]
+
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    name: Gradle Setup
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gradle/actions/wrapper-validation@v3
+      - name: Change Permissions
+        run: chmod +x ./gradlew
+      - name: Gradle Information
+        run: ./gradlew project tasks dependencies
+
+  build:
+    runs-on: ubuntu-latest
+    needs: setup
+    timeout-minutes: 20
+
+    name: Gradle Build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Change Permissions
+        run: chmod +x ./gradlew
+      - name: Install Firefox
+        uses: browser-actions/setup-firefox@v1
+      - name: Gradle Build
+        run: ./gradlew build
