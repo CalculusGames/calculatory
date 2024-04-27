@@ -21,19 +21,18 @@ repositories {
 
 kotlin {
     jvm()
+
     js {
-        browser {
-            testTask {
-                useKarma {
-                    useFirefoxHeadless()
-                }
+        browser()
+    }
+
+    sourceSets {
+        jvmTest {
+            dependencies {
+                implementation(kotlin("test"))
             }
         }
     }
-}
-
-dependencies {
-    commonTestImplementation(kotlin("test"))
 }
 
 tasks {
@@ -41,9 +40,10 @@ tasks {
         delete("kotlin-js-store")
     }
 
-    test {
+    named<Test>("jvmTest") {
         useJUnitPlatform()
         testLogging {
+            showStandardStreams = true
             events("passed", "skipped", "failed")
         }
         finalizedBy(jacocoTestReport)
