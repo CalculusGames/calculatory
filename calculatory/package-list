@@ -11,6 +11,8 @@ $dokka.location:xyz.calcugames.combinatory.calculatory/Path///PointingToDeclarat
 $dokka.location:xyz.calcugames.combinatory.calculatory/Path/Path/#xyz.calcugames.combinatory.CombiMap#kotlin.collections.List[xyz.calcugames.combinatory.Tile]/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/-path/-path.html
 $dokka.location:xyz.calcugames.combinatory.calculatory/Path/map/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/-path/map.html
 $dokka.location:xyz.calcugames.combinatory.calculatory/Path/tiles/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/-path/tiles.html
+$dokka.location:xyz.calcugames.combinatory.generator////PointingToDeclaration/calculatory/xyz.calcugames.combinatory.generator/index.html
+$dokka.location:xyz.calcugames.combinatory.generator//nextSeed/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.generator/next-seed.html
 $dokka.location:xyz.calcugames.combinatory////PointingToDeclaration/calculatory/xyz.calcugames.combinatory/index.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap.Companion///PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/-companion/index.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap.Companion/DEFAULT_SIZE/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/-companion/-d-e-f-a-u-l-t_-s-i-z-e.html
@@ -64,4 +66,5 @@ $dokka.location:xyz.calcugames.combinatory/Tile/x/#/PointingToDeclaration/calcu
 $dokka.location:xyz.calcugames.combinatory/Tile/y/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/y.html
 xyz.calcugames.combinatory
 xyz.calcugames.combinatory.calculatory
+xyz.calcugames.combinatory.generator
 
