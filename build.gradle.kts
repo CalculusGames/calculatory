@@ -2,7 +2,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
-    kotlin("multiplatform") version "1.9.23"
+    kotlin("multiplatform") version "1.9.24"
     id("org.jetbrains.dokka") version "1.9.20"
 
     java
@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "xyz.calcugames.combinatory"
-version = "0.1.0"
+version = "0.1.0-SNAPSHOT"
 description = "Open-Source algorithms for the Combinatory Game"
 
 repositories {
@@ -60,6 +60,48 @@ tasks {
 
             html.required.set(true)
             html.outputLocation.set(layout.buildDirectory.dir("jacocoHtml"))
+        }
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "xyz.calcugames.combinatory"
+            artifactId = "calculatory"
+
+            pom {
+                name = "calculatory"
+                description = "Algorithms used in the Combinatory Video Game "
+
+                licenses {
+                    license {
+                        name = "MIT License"
+                        url = "https://opensource.org/licenses/MIT"
+                    }
+                }
+
+                scm {
+                    connection = "scm:git:git://github.com/CalculusGames/calculatory.git"
+                    developerConnection = "scm:git:ssh://github.com/CalculusGames/calculatory.git"
+                    url = "https://github.com/CalculusGames/calculatory"
+                }
+            }
+
+            from(components["java"])
+        }
+    }
+
+    repositories {
+        maven {
+            credentials {
+                username = System.getenv("NEXUS_USERNAME")
+                password = System.getenv("NEXUS_PASSWORD")
+            }
+
+            val releases = "https://repo.calcugames.xyz/repository/maven-releases/"
+            val snapshots = "https://repo.calcugames.xyz/repository/maven-snapshots/"
+            url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshots else releases)
         }
     }
 }
