@@ -7,7 +7,7 @@ import xyz.calcugames.combinatory.Operation
  * Calculates all the possible number combinations given a map and operations.
  * @param map The map to calculate.
  */
-fun combinations(map: CombiMap): Set<Double> = combinations(allPaths(map, map.operations.size), map.operations)
+fun combinations(map: CombiMap): Set<Double> = combinations(allPaths(map, map.operations.size), map.operations.flatMap { (op, count) -> List(count) { op } })
 
 /**
  * Calculates all the possible number combinations given a set of paths and operations.

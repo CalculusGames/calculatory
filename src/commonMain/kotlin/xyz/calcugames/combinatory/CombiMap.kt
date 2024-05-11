@@ -29,9 +29,9 @@ interface CombiMap {
     val tiles: Set<Tile>
 
     /**
-     * The set of operations that can be performed on the map
+     * A map of operations that can be performed on the map to their initial count
      */
-    val operations: Set<Operation>
+    val operations: Map<Operation, Int>
 
     // Properties
 
@@ -70,15 +70,24 @@ interface CombiMap {
      * @param tile The tile to get the neighbors for
      * @return The set of neighbors for the tile
      */
-    fun getNeighbors(tile: Tile): List<Tile?>
+    fun getNeighbors(tile: Tile): List<Tile?> = listOf(
+        this[tile.x, tile.y - 1],
+        this[tile.x + 1, tile.y],
+        this[tile.x, tile.y + 1],
+        this[tile.x - 1, tile.y]
+    )
 
     /**
      * Gets the tile at the specified coordinates.
+     *
+     * - Positive X moves right.
+     * - Positive Y moves down.
+     *
      * @param x The x coordinate
      * @param y The y coordinate
      * @return The tile at the specified coordinates, or null if the coordinates are out of bounds
      */
-    operator fun get(x: Int, y: Int): Tile?
+    operator fun get(x: Int, y: Int): Tile? = tiles.firstOrNull { it.x == x && it.y == y }
 
     companion object {
         /**
