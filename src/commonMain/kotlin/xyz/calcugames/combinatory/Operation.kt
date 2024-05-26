@@ -9,6 +9,16 @@ import kotlin.math.pow
 interface Operation {
 
     /**
+     * The name of the operation.
+     */
+    val name: String
+
+    /**
+     * The ordinal ID of the operation, according to its subdivision.
+     */
+    val ordinal: Int
+
+    /**
      * The operation to be performed.
      */
     val function: (Double, Double) -> Double
