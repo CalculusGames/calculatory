@@ -59,6 +59,8 @@ $dokka.location:xyz.calcugames.combinatory/Operation.Power/values/#/PointingToDe
 $dokka.location:xyz.calcugames.combinatory/Operation///PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/index.html
 $dokka.location:xyz.calcugames.combinatory/Operation/function/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/function.html
 $dokka.location:xyz.calcugames.combinatory/Operation/invoke/#kotlin.Double#kotlin.Double/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/invoke.html
+$dokka.location:xyz.calcugames.combinatory/Operation/name/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/name.html
+$dokka.location:xyz.calcugames.combinatory/Operation/ordinal/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/ordinal.html
 $dokka.location:xyz.calcugames.combinatory/Tile///PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/index.html
 $dokka.location:xyz.calcugames.combinatory/Tile/equals/#kotlin.Any?/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/equals.html
 $dokka.location:xyz.calcugames.combinatory/Tile/value/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/value.html
