@@ -1,6 +1,3 @@
-import org.gradle.api.tasks.testing.logging.TestExceptionFormat
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
-
 plugins {
     kotlin("multiplatform") version "2.0.0"
     id("org.jetbrains.dokka") version "1.9.20"
@@ -10,8 +7,10 @@ plugins {
     jacoco
 }
 
+val v = "0.1.1"
+
 group = "xyz.calcugames.combinatory"
-version = "0.1.0-SNAPSHOT"
+version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
 description = "Open-Source algorithms for the Combinatory Game"
 
 repositories {
@@ -66,13 +65,10 @@ tasks {
 
 publishing {
     publications {
-        create<MavenPublication>("maven") {
-            groupId = "xyz.calcugames.combinatory"
-            artifactId = "calculatory"
-
+        getByName<MavenPublication>("kotlinMultiplatform") {
             pom {
                 name = "calculatory"
-                description = "Algorithms used in the Combinatory Video Game "
+                description = "Algorithms used in the Combinatory Video Game"
 
                 licenses {
                     license {
@@ -87,8 +83,6 @@ publishing {
                     url = "https://github.com/CalculusGames/calculatory"
                 }
             }
-
-            from(components["java"])
         }
     }
 
