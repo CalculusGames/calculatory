@@ -70,11 +70,23 @@ interface CombiMap {
      * @param tile The tile to get the neighbors for
      * @return The set of neighbors for the tile
      */
-    fun getNeighbors(tile: Tile): List<Tile?> = listOf(
-        this[tile.x, tile.y - 1],
-        this[tile.x + 1, tile.y],
-        this[tile.x, tile.y + 1],
-        this[tile.x - 1, tile.y]
+    fun getNeighbors(tile: Tile): List<Tile?> = getNeighbors(tile.x, tile.y)
+
+    /**
+     * Gets the neighbors for a tile.
+     *
+     * This list will always have a length of 4, and will be represented in the follwing order:
+     *
+     * `[up, right, down, left]`
+     * @param x The x coordinate of the tile
+     * @param y The y coordinate of the tile
+     * @return The set of neighbors for the tile
+     */
+    fun getNeighbors(x: Int, y: Int): List<Tile?> = listOf(
+        this[x, y - 1],
+        this[x + 1, y],
+        this[x, y + 1],
+        this[x - 1, y]
     )
 
     /**
