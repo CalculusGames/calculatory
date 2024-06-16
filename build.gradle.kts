@@ -7,7 +7,7 @@ plugins {
     jacoco
 }
 
-val v = "0.1.1"
+val v = "0.1.2"
 
 group = "xyz.calcugames.combinatory"
 version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
@@ -22,14 +22,20 @@ kotlin {
     jvm()
 
     js {
-        browser()
+        browser {
+            testTask {
+                useKarma { useFirefoxHeadless() }
+            }
+        }
     }
 
     sourceSets {
-        jvmTest {
-            dependencies {
-                implementation(kotlin("test"))
-            }
+        commonMain.dependencies {
+            compileOnly("com.soywiz.korge:korge-core:5.1.0")
+        }
+
+        commonTest.dependencies {
+            implementation(kotlin("test"))
         }
     }
 }
@@ -39,7 +45,7 @@ tasks {
         delete("kotlin-js-store")
     }
 
-    named<Test>("jvmTest") {
+    withType<Test>().configureEach {
         useJUnitPlatform()
         testLogging {
             showStandardStreams = true
