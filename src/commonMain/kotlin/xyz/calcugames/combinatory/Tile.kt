@@ -20,6 +20,12 @@ interface Tile {
      */
     val value: Double
 
+    // Util
+
+    operator fun component1(): Int = x
+    operator fun component2(): Int = y
+    operator fun component3(): Double = value
+
     override fun equals(other: Any?): Boolean
 
 }
