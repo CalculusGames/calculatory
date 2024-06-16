@@ -5,10 +5,9 @@ import xyz.calcugames.combinatory.Tile
 
 /**
  * Represents a Path on a Combinatory [CombiMap].
- * @param map The map the path is on.
  * @param tiles The set of tiles in the path.
  */
-data class Path(val map: CombiMap, val tiles: List<Tile>)
+data class Path(val tiles: List<Tile>)
 
 /**
  * Gets all possible paths on a map.
@@ -16,35 +15,36 @@ data class Path(val map: CombiMap, val tiles: List<Tile>)
  * @param count The number of swipes to make
  * @return The set of all possible paths
  */
-fun allPaths(map: CombiMap, count: Int): Set<Path> = allPaths0(map, count).map {
-    val tiles = mutableListOf<Tile>()
-    var c = map.start
-    for (i in it) {
-        tiles.add(c)
-        c = map.getNeighbors(c)[i.toInt()]!!
-    }
+fun allPaths(map: CombiMap, count: Int): Set<Path> =
+    allPaths0(map, count).map(::Path).toSet()
 
-    Path(map, tiles)
-}.toSet()
+private fun allPaths0(map: CombiMap, count: Int): List<List<Tile>> {
+    val paths = mutableListOf<List<Tile>>()
+    val visited = Array(map.size) { BooleanArray(map.size) }
+    val start = map.start
+    val (sx, sy) = start
 
-private fun allPaths0(map: CombiMap, count: Int): Set<ByteArray> {
-    val set = mutableSetOf<ByteArray>()
-    val c = mutableListOf<Byte>()
+    fun dfs(current: MutableList<Tile>, x: Int, y: Int) {
+        if (current.size == count) {
+            paths.add(current)
+            return
+        }
 
-    fun run(tile: Tile) {
-        val neighbors = map.getNeighbors(tile)
+        val neighbors = map.getNeighbors(x, y)
+        for (neighbor in neighbors.filterNotNull().filter { !visited[it.x][it.y] }) {
+            val (nx, ny) = neighbor
 
-        if (neighbors[0] != null && c.lastOrNull() != 0.toByte()) { c.add(0); run(neighbors[0]!!) }
-        if (neighbors[1] != null && c.lastOrNull() != 1.toByte()) { c.add(1); run(neighbors[1]!!) }
-        if (neighbors[2] != null && c.lastOrNull() != 2.toByte()) { c.add(2); run(neighbors[2]!!) }
-        if (neighbors[3] != null && c.lastOrNull() != 3.toByte()) { c.add(3); run(neighbors[3]!!) }
-
-        if (c.size == count) {
-            set.add(c.toByteArray())
-            c.removeLastOrNull()
+            visited[nx][ny] = true
+            current.add(neighbor)
+            dfs(current, nx, ny)
+            current.removeLast()
+            visited[nx][ny] = false
         }
     }
 
-    run(map.start)
-    return set
+    visited[sx][sy] = true
+    dfs(mutableListOf(start), sx, sy)
+    visited[sx][sy] = false
+
+    return paths
 }
