@@ -46,7 +46,7 @@ jobs:
       - name: Change Permissions
         run: chmod +x ./gradlew
       - name: Gradle Test
-        run: ./gradlew jvmTest
+        run: ./gradlew check
 
   deploy:
     runs-on: ubuntu-latest
