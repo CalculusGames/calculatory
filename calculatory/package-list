@@ -12,6 +12,7 @@ $dokka.location:xyz.calcugames.combinatory.calculatory//toJson/xyz.calcugames.co
 $dokka.location:xyz.calcugames.combinatory.calculatory/Path///PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/-path/index.html
 $dokka.location:xyz.calcugames.combinatory.calculatory/Path/Path/#kotlin.collections.List[xyz.calcugames.combinatory.Tile]/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/-path/-path.html
 $dokka.location:xyz.calcugames.combinatory.calculatory/Path/tiles/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/-path/tiles.html
+$dokka.location:xyz.calcugames.combinatory.calculatory/Path/toString/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/-path/to-string.html
 $dokka.location:xyz.calcugames.combinatory.generator////PointingToDeclaration/calculatory/xyz.calcugames.combinatory.generator/index.html
 $dokka.location:xyz.calcugames.combinatory.generator//nextSeed/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.generator/next-seed.html
 $dokka.location:xyz.calcugames.combinatory////PointingToDeclaration/calculatory/xyz.calcugames.combinatory/index.html
