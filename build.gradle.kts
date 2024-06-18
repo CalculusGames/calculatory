@@ -36,6 +36,7 @@ kotlin {
 
         commonTest.dependencies {
             implementation(kotlin("test"))
+            implementation("com.soywiz.korge:korge-core:5.1.0")
         }
     }
 }
@@ -55,7 +56,7 @@ tasks {
     }
 
     jacocoTestReport {
-        dependsOn(test)
+        dependsOn(check)
 
         reports {
             csv.required.set(false)
