@@ -7,7 +7,12 @@ import xyz.calcugames.combinatory.Tile
  * Represents a Path on a Combinatory [CombiMap].
  * @param tiles The set of tiles in the path.
  */
-data class Path(val tiles: List<Tile>)
+data class Path(val tiles: List<Tile>) {
+
+    override fun toString(): String
+        = tiles.joinToString(" -> ") { "(${it.x}, ${it.y})" }
+
+}
 
 /**
  * Gets all possible paths on a map.
@@ -20,31 +25,31 @@ fun allPaths(map: CombiMap, count: Int): Set<Path> =
 
 private fun allPaths0(map: CombiMap, count: Int): List<List<Tile>> {
     val paths = mutableListOf<List<Tile>>()
-    val visited = Array(map.size) { BooleanArray(map.size) }
     val start = map.start
-    val (sx, sy) = start
+    val valid = mutableSetOf<Tile>()
 
-    fun dfs(current: MutableList<Tile>, x: Int, y: Int) {
-        if (current.size == count) {
-            paths.add(current)
-            return
+    for (x in 0 until map.size)
+        for (y in 0 until map.size)
+            map[x, y]?.let { valid.add(it) }
+
+    fun dfs(currentPath: MutableList<Tile>, currentTile: Tile): List<List<Tile>> {
+        if (currentPath.size == count) {
+            return listOf(ArrayList(currentPath))
         }
 
-        val neighbors = map.getNeighbors(x, y)
-        for (neighbor in neighbors.filterNotNull().filter { !visited[it.x][it.y] }) {
-            val (nx, ny) = neighbor
-
-            visited[nx][ny] = true
-            current.add(neighbor)
-            dfs(current, nx, ny)
-            current.removeLast()
-            visited[nx][ny] = false
+        val current = mutableListOf<List<Tile>>()
+        val neighbors = map.getNeighbors(currentTile.x, currentTile.y)
+        for (neighbor in neighbors) {
+            if (neighbor != null && neighbor !in currentPath) {
+                currentPath.add(neighbor)
+                current.addAll(dfs(currentPath, neighbor))
+                currentPath.removeAt(currentPath.size - 1)
+            }
         }
+        return current
     }
 
-    visited[sx][sy] = true
-    dfs(mutableListOf(start), sx, sy)
-    visited[sx][sy] = false
+    paths.addAll(dfs(mutableListOf(start), start))
 
     return paths
 }
