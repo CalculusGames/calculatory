@@ -31,12 +31,12 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            compileOnly("com.soywiz.korge:korge-core:5.1.0")
+            compileOnly("com.soywiz.korge:korge-core:5.4.0")
         }
 
         commonTest.dependencies {
             implementation(kotlin("test"))
-            implementation("com.soywiz.korge:korge-core:5.1.0")
+            implementation("com.soywiz.korge:korge-core:5.4.0")
         }
     }
 }
