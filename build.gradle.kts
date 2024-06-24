@@ -7,11 +7,11 @@ plugins {
     jacoco
 }
 
-val v = "0.1.2"
+val v = "0.2.0"
 
 group = "xyz.calcugames.combinatory"
 version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
-description = "Open-Source algorithms for the Combinatory Game"
+description = "Open-Source code for the Combinatory Game"
 
 repositories {
     mavenCentral()
@@ -21,13 +21,13 @@ repositories {
 kotlin {
     jvm()
 
-    js {
-        browser {
-            testTask {
-                useKarma { useFirefoxHeadless() }
-            }
-        }
-    }
+    iosX64()
+    iosArm64()
+
+    androidNativeX86()
+    androidNativeX64()
+    androidNativeArm32()
+    androidNativeArm64()
 
     sourceSets {
         commonMain.dependencies {
