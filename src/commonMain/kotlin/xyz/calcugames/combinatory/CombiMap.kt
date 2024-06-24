@@ -1,11 +1,25 @@
 package xyz.calcugames.combinatory
 
-import xyz.calcugames.combinatory.calculatory.combinations
-
 /**
  * Abstraction for a Combinatory Map
  */
 interface CombiMap {
+
+    /**
+     * The index of the map in the game.
+     */
+    val index: Int
+
+    /**
+     * The category specifier for the map.
+     */
+    val category: String
+
+    /**
+     * The internal identifier for this map.
+     */
+    val id: String
+        get() = "$category-$index"
 
     /**
      * The size of the map
@@ -32,32 +46,6 @@ interface CombiMap {
      * A map of operations that can be performed on the map to their initial count
      */
     val operations: Map<Operation, Int>
-
-    // Properties
-
-    /**
-     * All potential combinations on this map, sorted in ascending order
-     */
-    val combinations: List<Double>
-        get() = combinations(this).sorted()
-
-    /**
-     * The minimum value of the combinations, to reach 1 star
-     */
-    val min: Double
-        get() = combinations[combinations.size / 4]
-
-    /**
-     * The goal value of the combinations, to reach 2 stars
-     */
-    val goal: Double
-        get() = combinations[combinations.size / 2]
-
-    /**
-     * The maximum value of the combinations, to reach 3 stars
-     */
-    val max: Double
-        get() = combinations.maxOrNull() ?: 0.0
 
     // Functions
 
