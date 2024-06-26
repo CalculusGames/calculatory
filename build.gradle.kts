@@ -24,11 +24,6 @@ kotlin {
     iosX64()
     iosArm64()
 
-    androidNativeX86()
-    androidNativeX64()
-    androidNativeArm32()
-    androidNativeArm64()
-
     sourceSets {
         commonMain.dependencies {
             compileOnly("com.soywiz.korge:korge-core:5.4.0")
