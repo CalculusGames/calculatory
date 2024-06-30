@@ -4,8 +4,6 @@ $dokka.location:xyz.calcugames.combinatory.calculatory////PointingToDeclaration/
 $dokka.location:xyz.calcugames.combinatory.calculatory//combination/#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/combination.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//factorial/#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/factorial.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//permutation/#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/permutation.html
-$dokka.location:xyz.calcugames.combinatory.generator////PointingToDeclaration/calculatory/xyz.calcugames.combinatory.generator/index.html
-$dokka.location:xyz.calcugames.combinatory.generator//nextSeed/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.generator/next-seed.html
 $dokka.location:xyz.calcugames.combinatory.storage////PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/index.html
 $dokka.location:xyz.calcugames.combinatory.storage//load/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/load.html
 $dokka.location:xyz.calcugames.combinatory.storage//root/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/root.html
@@ -76,6 +74,5 @@ $dokka.location:xyz.calcugames.combinatory/Tile/x/#/PointingToDeclaration/calcu
 $dokka.location:xyz.calcugames.combinatory/Tile/y/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/y.html
 xyz.calcugames.combinatory
 xyz.calcugames.combinatory.calculatory
-xyz.calcugames.combinatory.generator
 xyz.calcugames.combinatory.storage
 
