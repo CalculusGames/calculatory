@@ -55,39 +55,6 @@ interface Operation {
         DIVISION({ a, b -> a / b })
     }
 
-    /**
-     * Represents the power operations that can be performed.
-     */
-    enum class Power(override val function: (Double, Double) -> Double) : Operation {
-        /**
-         * Exponentiation operation.
-         */
-        EXPONENTIATION(exponentiation@{ a, b ->
-            if (b == 0.0) return@exponentiation 1.0
-            return@exponentiation a.pow(b)
-        }),
-
-        /**
-         * Logarithm operation.
-         */
-        LOGARITHM(logarithm@{ a, b ->
-            if (a == 0.0) return@logarithm 0.0
-            if (b == 0.0) return@logarithm 0.0
-
-            return@logarithm log(a, b)
-        }),
-
-        /**
-         * Root operation.
-         */
-        ROOT(root@{ a, b ->
-            if (a == 0.0) return@root 0.0
-            if (b == 0.0) return@root 0.0
-
-            return@root a.pow(1 / b)
-        })
-    }
-
     enum class Bitwise(override val function: (Double, Double) -> Double) : Operation {
         /**
          * Bitwise AND operation.
