@@ -20,7 +20,7 @@ val settingsFile: VfsFile = root["settings.json"]
  * Loads the storage.
  */
 suspend fun load() {
-    if (!root.exists()) root.mkdir()
+    if (!root.exists()) root.mkdirs()
 
     // Settings
     if (!settingsFile.exists())
