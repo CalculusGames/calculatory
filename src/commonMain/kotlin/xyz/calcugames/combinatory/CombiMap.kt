@@ -47,6 +47,11 @@ interface CombiMap {
      */
     val operations: Map<Operation, Int>
 
+    /**
+     * The minimum number of stars required to complete the map. If the level is generated, it will return `0`.
+     */
+    val minimumStars: Int
+
     // Functions
 
     /**
