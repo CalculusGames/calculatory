@@ -5,11 +5,12 @@ import korlibs.io.serialization.json.Json
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import xyz.calcugames.combinatory.comma
+import kotlin.reflect.KClass
 
 /**
  * Represents the settings for a game.
  */
-class Setting<T>(
+class Setting<T : Any>(
     /**
      * The ID of the setting to be stored.
      */
@@ -18,6 +19,10 @@ class Setting<T>(
      * The display name of the setting.
      */
     val name: String,
+    /**
+     * The type of the setting.
+     */
+    val type: KClass<T>,
     /**
      * All possible values for the setting.
      */
@@ -96,25 +101,27 @@ class Setting<T>(
         ) = Setting(
             id,
             name,
+            Boolean::class,
             listOf(true, false),
             { if (it) "On" else "Off" },
             { it },
             { it as? Boolean }
         )
 
-        private fun numbers(
+        private inline fun <reified T : Number> numbers(
             id: String,
             name: String = id.split("_").joinToString(" ") { word -> word.replaceFirstChar { it.uppercaseChar() } },
-            range: Iterable<Number>,
-            default: Number
+            range: Iterable<T>,
+            default: T
         ) = Setting(
             id,
             name,
-            range.map { it.toDouble() },
+            T::class,
+            range.map { it },
             { it.comma },
             { it },
-            { it as? Double },
-            default.toDouble()
+            { it as? T },
+            default
         )
 
         // Storage
@@ -123,11 +130,11 @@ class Setting<T>(
             .associate { setting -> setting.id to setting.serializedDefaultValue }
             .toMutableMap()
 
-        operator fun <T> get(setting: Setting<T>): T {
+        operator fun <T : Any> get(setting: Setting<T>): T {
             return setting.deserializer(settings[setting.id]) ?: setting.defaultValue
         }
 
-        operator fun <T> set(setting: Setting<T>, value: T) {
+        operator fun <T : Any> set(setting: Setting<T>, value: T) {
             settings[setting.id] = setting.serializer(value)
 
             launch(Dispatchers.IO) {

@@ -24,6 +24,11 @@ interface Operation {
     val function: (Double, Double) -> Double
 
     /**
+     * The internal ID of the operation. This is unique to each operation.
+     */
+    val id: Int
+
+    /**
      * Invokes the operation on the two numbers.
      * @param a The first number.
      * @param b The second number.
@@ -53,6 +58,11 @@ interface Operation {
          * Division operation.
          */
         DIVISION({ a, b -> a / b })
+
+        ;
+
+        override val id: Int
+            get() = ordinal
     }
 
     enum class Bitwise(override val function: (Double, Double) -> Double) : Operation {
@@ -80,5 +90,10 @@ interface Operation {
          * Bitwise Shift Right operation.
          */
         SHIFT_RIGHT({ a, b -> a.toInt().shr(b.toInt()).toDouble() })
+
+        ;
+
+        override val id: Int
+            get() = ordinal + Artithmetic.entries.size
     }
 }

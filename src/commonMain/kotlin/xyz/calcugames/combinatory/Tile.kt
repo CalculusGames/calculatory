@@ -28,4 +28,10 @@ interface Tile {
 
     override fun equals(other: Any?): Boolean
 
+    /**
+     * Converts the tile to a double array. [value] is stored first, followed by [x] and [y].
+     * @return The double array representation of the tile.
+     */
+    fun toDoubleArray(): DoubleArray = doubleArrayOf(value, x.toDouble(), y.toDouble())
+
 }

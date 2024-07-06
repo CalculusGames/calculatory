@@ -103,6 +103,6 @@ interface CombiMap {
         /**
          * The maximum size of a map
          */
-        const val MAX_SIZE = 11
+        const val MAX_SIZE = 13
     }
 }
