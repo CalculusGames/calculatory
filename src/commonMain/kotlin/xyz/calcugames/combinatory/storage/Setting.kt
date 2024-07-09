@@ -72,7 +72,7 @@ class Setting<T : Any>(
         /**
          * Whether to play sound effects.
          */
-        val SFX = boolean("sfx")
+        val SFX = boolean("sfx", "SFX")
 
         /**
          * Whether to show the scoreboard, which represents your current score.
@@ -129,6 +129,14 @@ class Setting<T : Any>(
         internal val settings: MutableMap<String, Any> = allSettings
             .associate { setting -> setting.id to setting.serializedDefaultValue }
             .toMutableMap()
+
+        /**
+         * Loads the settings from the specified map.
+         * @param settings The settings to load.
+         */
+        fun load(settings: Map<String, Any>) {
+            this.settings.putAll(settings)
+        }
 
         operator fun <T : Any> get(setting: Setting<T>): T {
             return setting.deserializer(settings[setting.id]) ?: setting.defaultValue
