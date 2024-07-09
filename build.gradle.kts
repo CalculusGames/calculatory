@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     kotlin("multiplatform") version "2.0.0"
     id("org.jetbrains.dokka") version "1.9.20"
-    id("com.android.library") version "8.2.0"
+    id("com.android.library") version "8.5.0"
 
     `maven-publish`
 }
