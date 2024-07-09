@@ -1,33 +1,39 @@
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     kotlin("multiplatform") version "2.0.0"
     id("org.jetbrains.dokka") version "1.9.20"
+    id("com.android.library") version "8.2.0"
 
-    java
     `maven-publish`
-    jacoco
 }
 
-val v = "0.3.2"
+val v = "0.3.3"
 
 group = "xyz.calcugames.combinatory"
 version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
 description = "Open-Source code for the Combinatory Game"
 
 repositories {
+    google()
     mavenCentral()
     mavenLocal()
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-}
-
 kotlin {
-    jvm()
+    jvm {
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_17
+        }
+    }
 
     iosX64()
     iosArm64()
+    androidTarget {
+        publishAllLibraryVariants()
+    }
 
     sourceSets {
         commonMain.dependencies {
@@ -38,6 +44,16 @@ kotlin {
             implementation(kotlin("test"))
             implementation("com.soywiz.korge:korge-core:5.4.0")
         }
+    }
+}
+
+android {
+    compileSdk = 33
+    namespace = "xyz.calcugames.combinatory"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
@@ -52,27 +68,12 @@ tasks {
             showStandardStreams = true
             events("passed", "skipped", "failed")
         }
-        finalizedBy(jacocoTestReport)
-    }
-
-    jacocoTestReport {
-        dependsOn(check)
-
-        reports {
-            csv.required.set(false)
-
-            xml.required.set(true)
-            xml.outputLocation.set(layout.buildDirectory.file("jacoco.xml"))
-
-            html.required.set(true)
-            html.outputLocation.set(layout.buildDirectory.dir("jacocoHtml"))
-        }
     }
 }
 
 publishing {
     publications {
-        getByName<MavenPublication>("kotlinMultiplatform") {
+        filterIsInstance<MavenPublication>().forEach { it.apply {
             pom {
                 name = "calculatory"
                 description = "Algorithms used in the Combinatory Video Game"
@@ -90,7 +91,7 @@ publishing {
                     url = "https://github.com/CalculusGames/calculatory"
                 }
             }
-        }
+        }}
     }
 
     repositories {

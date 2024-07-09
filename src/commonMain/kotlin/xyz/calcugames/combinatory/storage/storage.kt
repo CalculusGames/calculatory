@@ -6,7 +6,7 @@ import korlibs.io.async.launch
 import korlibs.io.async.use
 import korlibs.io.file.VfsFile
 import korlibs.io.file.VfsOpenMode
-import korlibs.io.file.std.standardVfs
+import korlibs.io.file.std.userHomeVfs
 import korlibs.io.serialization.json.Json
 import korlibs.io.stream.AsyncOutputStream
 import kotlinx.coroutines.Dispatchers
@@ -15,7 +15,7 @@ import kotlinx.coroutines.IO
 /**
  * The root directory for the Combinatory game and its storage.
  */
-val root: VfsFile = standardVfs.userSharedCacheDir(".calcugames/combinatory")
+val root: VfsFile = userHomeVfs[".calcugames/combinatory"]
 
 /**
  * Loads the storage.
