@@ -21,6 +21,12 @@ repositories {
     mavenLocal()
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 kotlin {
     jvm {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -49,7 +55,7 @@ kotlin {
 
 android {
     compileSdk = 33
-    namespace = "xyz.calcugames.combinatory"
+    namespace = "xyz.calcugames.combinatory.calculatory"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
