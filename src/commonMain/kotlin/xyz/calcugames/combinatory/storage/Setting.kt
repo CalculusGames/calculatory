@@ -136,10 +136,6 @@ class Setting<T : Any>(
 
         operator fun <T : Any> set(setting: Setting<T>, value: T) {
             settings[setting.id] = setting.serializer(value)
-
-            launch(Dispatchers.IO) {
-                settingsFile.writeString(Json.stringify(settings))
-            }
         }
     }
 
