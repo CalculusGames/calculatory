@@ -5,19 +5,7 @@ $dokka.location:xyz.calcugames.combinatory.calculatory//combination/#kotlin.Int#
 $dokka.location:xyz.calcugames.combinatory.calculatory//factorial/#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/factorial.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//permutation/#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/permutation.html
 $dokka.location:xyz.calcugames.combinatory.storage////PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/index.html
-$dokka.location:xyz.calcugames.combinatory.storage//load/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/load.html
 $dokka.location:xyz.calcugames.combinatory.storage//range/#kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/range.html
-$dokka.location:xyz.calcugames.combinatory.storage//root/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/root.html
-$dokka.location:xyz.calcugames.combinatory.storage//settingsFile/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/settings-file.html
-$dokka.location:xyz.calcugames.combinatory.storage/CombiMapData///PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-combi-map-data/index.html
-$dokka.location:xyz.calcugames.combinatory.storage/CombiMapData/CombiMapData/#xyz.calcugames.combinatory.CombiMap#korlibs.io.file.VfsFile/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-combi-map-data/-combi-map-data.html
-$dokka.location:xyz.calcugames.combinatory.storage/CombiMapData/best/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-combi-map-data/best.html
-$dokka.location:xyz.calcugames.combinatory.storage/CombiMapData/completed/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-combi-map-data/completed.html
-$dokka.location:xyz.calcugames.combinatory.storage/CombiMapData/data/xyz.calcugames.combinatory.CombiMap#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-combi-map-data/data.html
-$dokka.location:xyz.calcugames.combinatory.storage/CombiMapData/file/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-combi-map-data/file.html
-$dokka.location:xyz.calcugames.combinatory.storage/CombiMapData/load/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-combi-map-data/load.html
-$dokka.location:xyz.calcugames.combinatory.storage/CombiMapData/map/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-combi-map-data/map.html
-$dokka.location:xyz.calcugames.combinatory.storage/CombiMapData/save/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-combi-map-data/save.html
 $dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion///PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-companion/index.html
 $dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion/GUI_SCALE/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-companion/-g-u-i_-s-c-a-l-e.html
 $dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion/MUSIC/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-companion/-m-u-s-i-c.html
@@ -25,6 +13,7 @@ $dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion/SFX/#/Point
 $dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion/SHOW_SCOREBOARD/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-companion/-s-h-o-w_-s-c-o-r-e-b-o-a-r-d.html
 $dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion/allSettings/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-companion/all-settings.html
 $dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion/get/#xyz.calcugames.combinatory.storage.Setting[TypeParam(bounds=[kotlin.Any])]/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-companion/get.html
+$dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion/load/#kotlin.collections.Map[kotlin.String,kotlin.Any]/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-companion/load.html
 $dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion/set/#xyz.calcugames.combinatory.storage.Setting[TypeParam(bounds=[kotlin.Any])]#TypeParam(bounds=[kotlin.Any])/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-companion/set.html
 $dokka.location:xyz.calcugames.combinatory.storage/Setting///PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/index.html
 $dokka.location:xyz.calcugames.combinatory.storage/Setting/Setting/#kotlin.String#kotlin.String#kotlin.reflect.KClass[TypeParam(bounds=[kotlin.Any])]#kotlin.collections.List[TypeParam(bounds=[kotlin.Any])]#kotlin.Function1[TypeParam(bounds=[kotlin.Any]),kotlin.String]#kotlin.Function1[TypeParam(bounds=[kotlin.Any]),kotlin.Any]#kotlin.Function1[kotlin.Any?,TypeParam(bounds=[kotlin.Any])?]#TypeParam(bounds=[kotlin.Any])/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-setting.html
