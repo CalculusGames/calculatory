@@ -36,7 +36,11 @@ kotlin {
     }
 
     iosX64()
+    iosSimulatorArm64()
     iosArm64()
+    tvosX64()
+    tvosSimulatorArm64()
+    tvosArm64()
     androidTarget {
         publishAllLibraryVariants()
     }
