@@ -65,11 +65,6 @@ class Setting<T : Any>(
         // Settings
 
         /**
-         * Whether to play music.
-         */
-        val MUSIC = boolean("music")
-
-        /**
          * Whether to play sound effects.
          */
         val SFX = boolean("sfx", "SFX")
@@ -88,7 +83,6 @@ class Setting<T : Any>(
          * All settings for the game.
          */
         val allSettings = setOf(
-            MUSIC,
             SFX,
             SHOW_SCOREBOARD,
             GUI_SCALE

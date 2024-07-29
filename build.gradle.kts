@@ -4,12 +4,12 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     kotlin("multiplatform") version "2.0.0"
     id("org.jetbrains.dokka") version "1.9.20"
-    id("com.android.library") version "8.5.1"
+    id("com.android.library") version "8.2.0"
 
     `maven-publish`
 }
 
-val v = "0.3.5"
+val v = "0.3.6"
 
 group = "xyz.calcugames.combinatory"
 version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
@@ -47,12 +47,12 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            compileOnly("com.soywiz.korge:korge-core:5.4.0")
+            compileOnly("com.soywiz.korge:korge-core:6.0.0-beta1")
         }
 
         commonTest.dependencies {
             implementation(kotlin("test"))
-            implementation("com.soywiz.korge:korge-core:5.4.0")
+            implementation("com.soywiz.korge:korge-core:6.0.0-beta1")
         }
     }
 }
