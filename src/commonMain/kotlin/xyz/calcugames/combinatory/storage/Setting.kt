@@ -75,9 +75,9 @@ class Setting<T : Any>(
         val SHOW_SCOREBOARD = boolean("show_scoreboard")
 
         /**
-         * The GUI scale for the game.
+         * Whether to display animations.
          */
-        val GUI_SCALE = numbers("gui_scale", "GUI Scale", range(0.5, 2.0, 0.25), 1.0)
+        val ANIMATIONS = boolean("animations")
 
         /**
          * All settings for the game.
@@ -85,7 +85,7 @@ class Setting<T : Any>(
         val allSettings = setOf(
             SFX,
             SHOW_SCOREBOARD,
-            GUI_SCALE
+            ANIMATIONS
         )
 
         // API

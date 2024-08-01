@@ -9,7 +9,7 @@ plugins {
     `maven-publish`
 }
 
-val v = "0.3.6"
+val v = "0.3.7"
 
 group = "xyz.calcugames.combinatory"
 version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
@@ -47,12 +47,12 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            compileOnly("com.soywiz.korge:korge-core:6.0.0-beta1")
+            compileOnly("com.soywiz.korge:korge-core:6.0.0-beta2")
         }
 
         commonTest.dependencies {
             implementation(kotlin("test"))
-            implementation("com.soywiz.korge:korge-core:6.0.0-beta1")
+            implementation("com.soywiz.korge:korge-core:6.0.0-beta2")
         }
     }
 }
