@@ -1,8 +1,5 @@
 package xyz.calcugames.combinatory
 
-import kotlin.math.log
-import kotlin.math.pow
-
 /**
  * Represents an operation that can be performed on two numbers to get an output.
  */
@@ -38,7 +35,7 @@ interface Operation {
     /**
      * Represents the arithmetic operations that can be performed.
      */
-    enum class Artithmetic(override val function: (Double, Double) -> Double) : Operation {
+    enum class Arithmetic(override val function: (Double, Double) -> Double) : Operation {
         /**
          * Addition operation.
          */
@@ -94,6 +91,6 @@ interface Operation {
         ;
 
         override val id: Int
-            get() = ordinal + Artithmetic.entries.size
+            get() = ordinal + Arithmetic.entries.size
     }
 }
