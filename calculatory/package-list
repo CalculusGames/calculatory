@@ -2,7 +2,9 @@ $dokka.format:html-v1
 $dokka.linkExtension:html
 $dokka.location:xyz.calcugames.combinatory.calculatory////PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/index.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//combination/#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/combination.html
+$dokka.location:xyz.calcugames.combinatory.calculatory//directions/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/directions.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//factorial/#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/factorial.html
+$dokka.location:xyz.calcugames.combinatory.calculatory//findValues/#kotlin.Array[kotlin.DoubleArray]#kotlin.collections.List[xyz.calcugames.combinatory.Operation]#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/find-values.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//permutation/#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/permutation.html
 $dokka.location:xyz.calcugames.combinatory.storage////PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/index.html
 $dokka.location:xyz.calcugames.combinatory.storage//range/#kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/range.html
@@ -47,16 +49,16 @@ $dokka.location:xyz.calcugames.combinatory/CombiMap/operations/#/PointingToDecla
 $dokka.location:xyz.calcugames.combinatory/CombiMap/size/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/size.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap/start/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/start.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap/tiles/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/tiles.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic.ADDITION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/-a-d-d-i-t-i-o-n/index.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic.DIVISION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/-d-i-v-i-s-i-o-n/index.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic.MULTIPLICATION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/-m-u-l-t-i-p-l-i-c-a-t-i-o-n/index.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic.SUBTRACTION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/-s-u-b-t-r-a-c-t-i-o-n/index.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic///PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/index.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic/entries/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/entries.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic/function/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/function.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic/id/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/id.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic/valueOf/#kotlin.String/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/value-of.html
-$dokka.location:xyz.calcugames.combinatory/Operation.Artithmetic/values/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-artithmetic/values.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic.ADDITION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/-a-d-d-i-t-i-o-n/index.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic.DIVISION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/-d-i-v-i-s-i-o-n/index.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic.MULTIPLICATION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/-m-u-l-t-i-p-l-i-c-a-t-i-o-n/index.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic.SUBTRACTION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/-s-u-b-t-r-a-c-t-i-o-n/index.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic///PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/index.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic/entries/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/entries.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic/function/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/function.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic/id/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/id.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic/valueOf/#kotlin.String/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/value-of.html
+$dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic/values/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/values.html
 $dokka.location:xyz.calcugames.combinatory/Operation.Bitwise.AND///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-bitwise/-a-n-d/index.html
 $dokka.location:xyz.calcugames.combinatory/Operation.Bitwise.EXCLUSIVE_OR///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-bitwise/-e-x-c-l-u-s-i-v-e_-o-r/index.html
 $dokka.location:xyz.calcugames.combinatory/Operation.Bitwise.OR///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-bitwise/-o-r/index.html
