@@ -5,3 +5,4 @@ build/
 kotlin-js-store/
 *.iml
 .kotlin/
+local.properties

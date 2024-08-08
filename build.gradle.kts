@@ -2,14 +2,14 @@ import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    kotlin("multiplatform") version "2.0.0"
+    kotlin("multiplatform") version "2.0.10"
     id("org.jetbrains.dokka") version "1.9.20"
     id("com.android.library") version "8.2.0"
 
     `maven-publish`
 }
 
-val v = "0.3.7"
+val v = "0.4.0"
 
 group = "xyz.calcugames.combinatory"
 version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
