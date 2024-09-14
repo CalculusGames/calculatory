@@ -1,11 +1,13 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
 $dokka.location:xyz.calcugames.combinatory.calculatory////PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/index.html
+$dokka.location:xyz.calcugames.combinatory.calculatory//center/kotlin.collections.Iterable[xyz.calcugames.combinatory.Tile]#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/center.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//combination/#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/combination.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//directions/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/directions.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//factorial/#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/factorial.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//findValues/#kotlin.Array[kotlin.DoubleArray]#kotlin.collections.List[xyz.calcugames.combinatory.Operation]#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/find-values.html
 $dokka.location:xyz.calcugames.combinatory.calculatory//permutation/#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/permutation.html
+$dokka.location:xyz.calcugames.combinatory.calculatory//removeInaccessibleTiles/kotlin.collections.Iterable[xyz.calcugames.combinatory.Tile]#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.calculatory/remove-inaccessible-tiles.html
 $dokka.location:xyz.calcugames.combinatory.storage////PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/index.html
 $dokka.location:xyz.calcugames.combinatory.storage//range/#kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/range.html
 $dokka.location:xyz.calcugames.combinatory.storage/Setting.Companion///PointingToDeclaration/calculatory/xyz.calcugames.combinatory.storage/-setting/-companion/index.html
@@ -80,6 +82,7 @@ $dokka.location:xyz.calcugames.combinatory/Tile///PointingToDeclaration/calcula
 $dokka.location:xyz.calcugames.combinatory/Tile/component1/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/component1.html
 $dokka.location:xyz.calcugames.combinatory/Tile/component2/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/component2.html
 $dokka.location:xyz.calcugames.combinatory/Tile/component3/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/component3.html
+$dokka.location:xyz.calcugames.combinatory/Tile/copy/#kotlin.Int#kotlin.Int#kotlin.Double/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/copy.html
 $dokka.location:xyz.calcugames.combinatory/Tile/equals/#kotlin.Any?/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/equals.html
 $dokka.location:xyz.calcugames.combinatory/Tile/toDoubleArray/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/to-double-array.html
 $dokka.location:xyz.calcugames.combinatory/Tile/value/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/value.html
