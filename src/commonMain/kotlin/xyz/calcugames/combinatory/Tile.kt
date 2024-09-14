@@ -8,17 +8,17 @@ interface Tile {
     /**
      * The x coordinate of the tile
      */
-    val x: Int
+    var x: Int
 
     /**
      * The y coordinate of the tile
      */
-    val y: Int
+    var y: Int
 
     /**
      * The number value of the tile
      */
-    val value: Double
+    var value: Double
 
     // Util
 
@@ -33,5 +33,14 @@ interface Tile {
      * @return The double array representation of the tile.
      */
     fun toDoubleArray(): DoubleArray = doubleArrayOf(value, x.toDouble(), y.toDouble())
+
+    /**
+     * Copies the tile with the given parameters.
+     * @param x The x coordinate of the new tile.
+     * @param y The y coordinate of the new tile.
+     * @param value The value of the new tile.
+     * @return The new tile.
+     */
+    fun copy(x: Int = this.x, y: Int = this.y, value: Double = this.value): Tile
 
 }

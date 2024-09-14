@@ -9,7 +9,7 @@ plugins {
     `maven-publish`
 }
 
-val v = "0.4.0"
+val v = "0.4.1"
 
 group = "xyz.calcugames.combinatory"
 version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
