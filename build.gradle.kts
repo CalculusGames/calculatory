@@ -47,12 +47,12 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            compileOnly("com.soywiz.korge:korge-core:6.0.0-beta3")
+            compileOnly("com.soywiz.korge:korge-core:6.0.0-beta4")
         }
 
         commonTest.dependencies {
             implementation(kotlin("test"))
-            implementation("com.soywiz.korge:korge-core:6.0.0-beta3")
+            implementation("com.soywiz.korge:korge-core:6.0.0-beta4")
         }
     }
 }
