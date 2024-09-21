@@ -36,6 +36,7 @@ $dokka.location:xyz.calcugames.combinatory//comma/kotlin.Number#/PointingToDecla
 $dokka.location:xyz.calcugames.combinatory//fromSuffix/kotlin.String#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/from-suffix.html
 $dokka.location:xyz.calcugames.combinatory//withSuffix/kotlin.Number#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/with-suffix.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap.Companion///PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/-companion/index.html
+$dokka.location:xyz.calcugames.combinatory/CombiMap.Companion/ALL_SIZES/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/-companion/-a-l-l_-s-i-z-e-s.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap.Companion/DEFAULT_SIZE/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/-companion/-d-e-f-a-u-l-t_-s-i-z-e.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap.Companion/MAX_SIZE/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/-companion/-m-a-x_-s-i-z-e.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap///PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/index.html
@@ -46,11 +47,13 @@ $dokka.location:xyz.calcugames.combinatory/CombiMap/getNeighbors/#kotlin.Int#kot
 $dokka.location:xyz.calcugames.combinatory/CombiMap/getNeighbors/#xyz.calcugames.combinatory.Tile/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/get-neighbors.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap/id/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/id.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap/index/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/--index--.html
+$dokka.location:xyz.calcugames.combinatory/CombiMap/isGenerated/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/is-generated.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap/minimumStars/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/minimum-stars.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap/operations/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/operations.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap/size/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/size.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap/start/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/start.html
 $dokka.location:xyz.calcugames.combinatory/CombiMap/tiles/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/tiles.html
+$dokka.location:xyz.calcugames.combinatory/CombiMap/to2DArray/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-combi-map/to2-d-array.html
 $dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic.ADDITION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/-a-d-d-i-t-i-o-n/index.html
 $dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic.DIVISION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/-d-i-v-i-s-i-o-n/index.html
 $dokka.location:xyz.calcugames.combinatory/Operation.Arithmetic.MULTIPLICATION///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}calculatory/xyz.calcugames.combinatory/-operation/-arithmetic/-m-u-l-t-i-p-l-i-c-a-t-i-o-n/index.html
@@ -84,6 +87,7 @@ $dokka.location:xyz.calcugames.combinatory/Tile/component2/#/PointingToDeclarati
 $dokka.location:xyz.calcugames.combinatory/Tile/component3/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/component3.html
 $dokka.location:xyz.calcugames.combinatory/Tile/copy/#kotlin.Int#kotlin.Int#kotlin.Double/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/copy.html
 $dokka.location:xyz.calcugames.combinatory/Tile/equals/#kotlin.Any?/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/equals.html
+$dokka.location:xyz.calcugames.combinatory/Tile/getNeighbors/#kotlin.collections.List[xyz.calcugames.combinatory.Tile]/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/get-neighbors.html
 $dokka.location:xyz.calcugames.combinatory/Tile/toDoubleArray/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/to-double-array.html
 $dokka.location:xyz.calcugames.combinatory/Tile/value/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/value.html
 $dokka.location:xyz.calcugames.combinatory/Tile/x/#/PointingToDeclaration/calculatory/xyz.calcugames.combinatory/-tile/x.html
