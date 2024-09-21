@@ -43,4 +43,12 @@ interface Tile {
      */
     fun copy(x: Int = this.x, y: Int = this.y, value: Double = this.value): Tile
 
+    /**
+     * Gets the neighbors for a tile.
+     * @param grid The grid to get the neighbors from.
+     * @return The set of neighbors for the tile.
+     */
+    fun getNeighbors(grid: List<Tile>) = grid
+        .filter { it.x in x - 1..x + 1 && it.y in y - 1..y + 1 && it != this }
+        .filter { it.value > 0.0 }
 }

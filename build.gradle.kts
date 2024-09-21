@@ -9,7 +9,7 @@ plugins {
     `maven-publish`
 }
 
-val v = "0.4.1"
+val v = "0.4.2"
 
 group = "xyz.calcugames.combinatory"
 version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
@@ -33,6 +33,11 @@ kotlin {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_17
         }
+    }
+
+    js {
+        browser()
+        nodejs()
     }
 
     iosX64()

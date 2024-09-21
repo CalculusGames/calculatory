@@ -52,6 +52,12 @@ interface CombiMap {
      */
     val minimumStars: Int
 
+    /**
+     * Whether this map is automatically generated or not.
+     */
+    val isGenerated: Boolean
+        get() = index == -1 || category == "endless"
+
     // Functions
 
     /**
@@ -94,6 +100,13 @@ interface CombiMap {
      */
     operator fun get(x: Int, y: Int): Tile? = tiles.firstOrNull { it.x == x && it.y == y }
 
+    /**
+     * Converts the map to a 2D array.
+     * @return The 2D array representation of the map
+     */
+    fun to2DArray(): Array<DoubleArray>
+        = Array(size) { x -> DoubleArray(size) { y -> tiles.find { it.x == x && it.y == y }?.value ?: 0.0 } }
+
     companion object {
         /**
          * The default size of a map
@@ -104,5 +117,10 @@ interface CombiMap {
          * The maximum size of a map
          */
         const val MAX_SIZE = 13
+
+        /**
+         * All possible sizes for a map
+         */
+        val ALL_SIZES = (DEFAULT_SIZE..MAX_SIZE).filter { it % 2 != 0 }.sorted()
     }
 }
