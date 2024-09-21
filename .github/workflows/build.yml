@@ -50,7 +50,7 @@ jobs:
       - name: Change Permissions
         run: chmod +x ./gradlew
       - name: Gradle Build
-        run: ./gradlew clean assemble
+        run: ./gradlew assemble
 
   test:
     runs-on: ubuntu-latest
@@ -89,7 +89,7 @@ jobs:
       - name: Change Permissions
         run: chmod +x ./gradlew
       - name: Build Dokka
-        run: ./gradlew clean dokkaHtml
+        run: ./gradlew dokkaHtml
       - name: Deploy Dokka
         run: bash dokka.sh ${GITHUB_SHA::7}
 
@@ -110,10 +110,8 @@ jobs:
           cache: 'gradle'
       - name: Change Permissions
         run: chmod +x ./gradlew
-      - name: Install Firefox
-        uses: browser-actions/setup-firefox@v1
       - name: Publish to Repository
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
-        run: ./gradlew clean assemble publish -Psnapshot=true
+        run: ./gradlew publish -Psnapshot=true
