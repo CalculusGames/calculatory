@@ -1,10 +1,11 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.time.Duration
 
 plugins {
     kotlin("multiplatform") version "2.0.20"
     id("org.jetbrains.dokka") version "1.9.20"
-    id("com.android.library") version "8.2.0"
+    id("com.android.library") version "8.2.2"
 
     `maven-publish`
 }
@@ -35,11 +36,6 @@ kotlin {
         }
     }
 
-    js {
-        browser()
-        nodejs()
-    }
-
     iosX64()
     iosSimulatorArm64()
     iosArm64()
@@ -55,14 +51,13 @@ kotlin {
             compileOnly("com.soywiz.korge:korge-core:6.0.0-beta4")
         }
 
-        listOf(nativeMain, jsMain).forEach { sourceSet ->
-            sourceSet.dependencies {
-                api("com.soywiz.korge:korge-core:6.0.0-beta4")
-            }
+        nativeMain.dependencies {
+            api("com.soywiz.korge:korge-core:6.0.0-beta4")
         }
 
         commonTest.dependencies {
             implementation(kotlin("test"))
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
             implementation("com.soywiz.korge:korge-core:6.0.0-beta4")
         }
     }

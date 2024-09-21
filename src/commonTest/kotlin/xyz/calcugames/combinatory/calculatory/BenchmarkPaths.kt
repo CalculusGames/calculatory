@@ -1,6 +1,6 @@
 package xyz.calcugames.combinatory.calculatory
 
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import xyz.calcugames.combinatory.Operation
 import kotlin.test.Test
 import kotlin.time.measureTime
@@ -8,7 +8,7 @@ import kotlin.time.measureTime
 class BenchmarkPaths {
 
     @Test
-    fun benchmark() = runBlocking {
+    fun benchmark() = runTest {
         val g1 = arrayOf(
             doubleArrayOf(1.0, 2.0, 3.0),
             doubleArrayOf(6.0, 5.0, 4.0),
