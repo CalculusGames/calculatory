@@ -55,6 +55,10 @@ kotlin {
             compileOnly("com.soywiz.korge:korge-core:6.0.0-beta4")
         }
 
+        nativeMain.dependencies {
+            api("com.soywiz.korge:korge-core:6.0.0-beta4")
+        }
+
         commonTest.dependencies {
             implementation(kotlin("test"))
             implementation("com.soywiz.korge:korge-core:6.0.0-beta4")
