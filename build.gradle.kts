@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.time.Duration
 
@@ -10,7 +11,7 @@ plugins {
     `maven-publish`
 }
 
-val v = "0.4.2"
+val v = "0.4.3"
 
 group = "xyz.calcugames.combinatory"
 version = if (project.hasProperty("snapshot")) "$v-SNAPSHOT" else v
@@ -36,6 +37,18 @@ kotlin {
         }
     }
 
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
+        browser {
+            testTask {
+                useMocha {
+                    timeout = "10m"
+                }
+            }
+        }
+        generateTypeScriptDefinitions()
+    }
+
     iosX64()
     iosSimulatorArm64()
     iosArm64()
@@ -51,8 +64,10 @@ kotlin {
             compileOnly("com.soywiz.korge:korge-core:6.0.0-beta4")
         }
 
-        nativeMain.dependencies {
-            api("com.soywiz.korge:korge-core:6.0.0-beta4")
+        listOf(nativeMain, wasmJsMain).forEach { sourceSet ->
+            sourceSet.dependencies {
+                api("com.soywiz.korge:korge-core:6.0.0-beta4")
+            }
         }
 
         commonTest.dependencies {
