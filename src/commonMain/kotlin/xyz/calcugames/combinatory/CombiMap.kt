@@ -56,7 +56,7 @@ interface CombiMap {
      * Whether this map is automatically generated or not.
      */
     val isGenerated: Boolean
-        get() = index == -1 || category == "endless"
+        get() = index == -1 || category.contains("endless")
 
     // Functions
 
