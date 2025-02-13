@@ -4,9 +4,9 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.time.Duration
 
 plugins {
-    kotlin("multiplatform") version "2.0.21"
+    kotlin("multiplatform") version "2.1.10"
     id("org.jetbrains.dokka") version "2.0.0"
-    id("com.android.library") version "8.8.0"
+    id("com.android.library") version "8.8.1"
 
     `maven-publish`
 }
@@ -73,7 +73,7 @@ kotlin {
 
         commonTest.dependencies {
             implementation(kotlin("test"))
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.1")
             implementation("com.soywiz.korge:korge-core:6.0.0-beta4")
         }
     }
