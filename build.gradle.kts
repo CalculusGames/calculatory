@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.time.Duration
 
 plugins {
-    kotlin("multiplatform") version "2.1.10"
+    kotlin("multiplatform") version "2.1.20"
     id("org.jetbrains.dokka") version "2.0.0"
     id("com.android.library") version "8.9.0"
 
