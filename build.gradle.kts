@@ -4,9 +4,9 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.time.Duration
 
 plugins {
-    kotlin("multiplatform") version "2.1.20"
+    kotlin("multiplatform") version "2.1.21"
     id("org.jetbrains.dokka") version "2.0.0"
-    id("com.android.library") version "8.9.2"
+    id("com.android.library") version "8.10.0"
 
     `maven-publish`
 }
@@ -62,19 +62,19 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            compileOnly("com.soywiz.korge:korge-core:6.0.0-beta4")
+            compileOnly("com.soywiz.korge:korge-core:6.0.0")
         }
 
         listOf(nativeMain, wasmJsMain).forEach { sourceSet ->
             sourceSet.dependencies {
-                api("com.soywiz.korge:korge-core:6.0.0-beta4")
+                api("com.soywiz.korge:korge-core:6.0.0")
             }
         }
 
         commonTest.dependencies {
             implementation(kotlin("test"))
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
-            implementation("com.soywiz.korge:korge-core:6.0.0-beta4")
+            implementation("com.soywiz.korge:korge-core:6.0.0")
         }
     }
 }
